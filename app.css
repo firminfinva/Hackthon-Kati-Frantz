@@ -1,0 +1,450 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+button{
+  border: none;
+  background-color: none;
+  
+}
+button:focus{
+
+  outline: 1.5px solid blue !important;
+  
+}
+body {
+  background-color: #f7f7f7;
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  background-color: #1c181d;
+  height: 50px;
+  padding: 5px 20px;
+}
+form {
+  position: relative;
+  margin: auto 0;
+}
+form>svg {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  margin: auto 0;
+  color: rgb(192, 190, 190);
+}
+input {
+  /* background-color: rgb(50, 47, 47); */
+  background-color: rgb(50, 47, 47);
+  border-radius: 5px;
+  border: 1px solid gray;
+  height: 30px;
+  width: 500px;
+  padding: 10px 35px;
+  box-sizing: border-box;
+}
+input:hover {
+  border: 1px solid white;
+}
+input:focus {
+  border: 2px solid white;
+}
+input::placeholder {
+  /* color: rgb(192, 190, 190); */
+  color: rgb(225, 222, 222);
+}
+nav > a{
+  background-image: url("https://crushingit.tech/hackathon-assets/shopify-icon-desktop.svg");
+  background-size: 80px;
+  background-repeat: no-repeat;
+  width: 80px;
+  line-height: 0; 
+  font-size: 0;
+  color: transparent
+}
+nav > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+nav > div > button {
+  background-color: rgb(50, 47, 47);
+  border-radius: 5px;
+  color: white;
+}
+nav > div > button:hover, #alert-button:hover {
+  background-color: #616161;
+}
+#alert-button{
+  width: 30px;
+  height: 30px;
+  background-color: rgb(50, 47, 47);
+  border-radius: 5px;
+}
+nav > div > button:focus-within, #alert-button:focus-within {
+  border: 1px solid blue; 
+}
+
+nav > div > button> svg {
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  padding: 1px;
+}
+ 
+nav > div > button:last-of-type {
+  color: #e3e3e3;
+  font-size: 12px;
+  margin: auto;
+  padding: 7px 1px 7px 5px;
+}
+
+nav > div > button > span:last-of-type {
+  color: #6B6B6B;
+  background-color: rgb(184, 255, 184); 
+  border-radius: 5px;
+  padding: 5px 3px;
+} 
+.alert,
+.menu {
+  position: absolute;
+  background-color: white;
+  border-radius: 10px;
+  z-index: 2;
+  top: 70px;
+  border: 1px solid rgb(210, 209, 209);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.alert {
+  color: rgb(50, 47, 47);
+  right: 10px;
+
+  font-weight: 550;
+  padding: 15px;
+}
+
+.alert > div {
+  display: flex;
+  justify-content: space-between;
+}
+.alert > div > p {
+  font-weight: 600;
+  font-size: 12px;
+}
+.alert > p {
+  background-color: #f1f1f1;
+  padding: 15px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.alert-active{
+  display: block;
+}
+
+.menu {
+  display: none;
+  left: 80.5%;
+  width: 18%;
+  padding: 5px;
+}
+
+.menu-active{
+  display: block;
+}
+ul {
+  list-style-type: none;
+}
+.menu > li>a, .menu > li>a>button {
+  text-decoration: none;
+  width: 100%;
+  border-radius: 10px;
+  background-color: white;
+  
+}
+.menu > li {
+  display: block;
+  text-decoration: none;
+  margin: 3px 0;
+  padding: 2px 5px;
+  border-radius: 5px;
+
+}
+.menu > li:first-of-type>a>button {
+  background-color: #f1f1f1
+}
+.menu > li>a, .menu > li>a>button:hover,.menu > li:hover {
+  background-color: #f1f1f1
+}
+
+.menu > li:focus,.menu > li>a>button:focus {
+  border: 1px solid blue;
+}
+.menu >li>a>button{
+  display: flex;
+  padding: 10px;
+}
+
+.menu > li>a>button:first-of-type {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 20px;
+  padding: 5px;
+  border-radius: 10px;
+  
+}
+.menu > li:first-of-type >a>button >div {
+  display: flex;
+  justify-content: end;
+  margin: auto 2px;
+}
+.menu > li:first-of-type >a>button>div>span{
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  padding: 5px;
+  box-sizing: border-box;
+  font-weight: 550;
+}
+.menu > li:first-of-type >a>button>div>span:first-of-type{
+  box-sizing: border-box;
+  background-color: rgb(165, 235, 165);
+  color: #616161;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+.identity{
+  display: flex;
+  flex-direction: column;
+  align-content: start;
+
+}
+.identity>p{
+  position: relative;
+  display: flex;
+}
+.identity>span{
+  color: #616161;
+}
+main {
+  width: 60%;
+  height: 100px;
+  margin: 22px auto;
+}
+.trial-div {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  background-color: #1c181d;
+  color: #e3e3e3;
+  padding: 15px 25px 15px 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.trial-div > p,
+.trial-div > div {
+  margin: auto 5px;
+}
+.trial-div > div > a {
+  text-decoration: none;
+  background-color: white;
+  color: #1c181d;
+  border-radius: 5px;
+  border: none;
+  padding: 5px 10px;
+}
+.trial-div > div > span > svg {
+  position: absolute;
+  margin: auto 0;
+  right: 5px;
+}
+
+progress {
+  position: relative;
+  bottom: 5px;
+  left: 10px;
+  width: 100px;
+  height: 4px;
+  border: 1px solid gray;
+  border-radius: 2px;
+}
+progress::-webkit-progress-bar {
+  background-color: rgb(192, 190, 190);
+}
+progress::-webkit-progress-value {
+  background-color: black;
+}
+
+.guide-div {
+  background-color: white;
+  border: 1px solid #c8c6c6;
+  border-radius: 10px;
+  height: auto;
+  width: 100%;
+}
+.top-guide-div {
+  position: relative;
+  padding: 15px;
+}
+.top-guide-div > h4 {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.top-guide-div > p {
+  font-weight: 200;
+  color: #616161;
+}
+.top-guide-div > p:first-of-type {
+  margin-bottom: 10px;
+}
+.top-guide-div > p:last-of-type {
+  font-size: 12.5px;
+}
+
+.top-guide-div > span {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 5px;
+}
+.top-guide-div > span:hover {
+  background-color: #ebebee;
+ 
+}
+.top-guide-div > span:focus-within {
+  border: 1px solid blue;
+}
+.setups {
+  padding: 2px;
+}
+.setups > div {
+  position: relative;
+  border-radius: 10px;
+  padding: 3px 10px 10px 10px;
+}
+.setup-title {
+  position: relative;
+  overflow: hidden;
+}
+.setup-title > svg {
+  position: relative;
+  top: 5px;
+  cursor: pointer;
+}
+.setups-body {
+  margin-left: 25px;
+}
+.setups-body > p {
+  margin: 20px 0 10px 0;
+  color: #616161;
+  line-height: 1.5;
+}
+.setups-body > p > a {
+  text-decoration: none;
+  color: #005bd3;
+}
+.setups-body > button {
+  padding: 7px 10px;
+  border-radius: 5px;
+}
+
+.setups-body > button:last-child {
+  background-color: transparent;
+  margin-left: 20px;
+  color: black;
+  border: none;
+
+}
+.setups-body > button:first-of-type {
+  background-color: rgb(71, 67, 67);
+  color: white;
+  border: 1px solid #616161;
+  box-shadow: 1px 1px 1px 1px black;
+
+}
+.setups-body > button:last-child:hover {
+  background-color: #ebebee;
+}
+.setups-body > button:first-of-type:hover {
+  background-color: #1c181d;
+}
+.setups-body > img {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  filter: drop-shadow(1px -2px 1px gray);
+  -webkit-mask-image: linear-gradient(#616161, rgba(255, 255, 255, 0));
+  mask-image: linear-gradient(#616161, rgba(255, 255, 255, 0));
+}
+.loading{
+  animation: orbit .7s linear infinite;
+}
+@keyframes orbit {
+  to{
+    transform: rotate(360deg);
+  }
+}
+@media only screen and (max-width: 800px) {
+  nav{
+    flex-wrap: nowrap;
+    gap: 0 10px;
+  }
+  nav > a{
+    background-image: url("https://crushingit.tech/hackathon-assets/shopify-icon.svg");
+    background-size: 30px;
+    width: 30px;
+    margin: 7px 0;
+  }
+  nav > div {
+    flex-wrap: nowrap;
+    gap: 5px;
+  }
+  nav > div > svg {
+    margin-top: 10px;
+  }
+  nav > div > div > span:first-of-type {
+    display: none;
+  }
+  input {
+   flex-shrink: 2;
+    width: 100%;
+  }
+  .menu {
+    left: 2.5%;
+    right: 2.5%;
+    width: 92%;
+    padding: 5px;
+  }
+  main {
+    width: 100%;
+  }
+  .trial-div{
+    flex-direction: column;
+    padding: 20px 10% 20px 20px;
+    gap: 20px;
+  }
+  .trial-div>p{
+    position: relative;
+    left: 0px;
+  }
+  .trial-div > p,
+  .trial-div > div {
+    margin: auto 0px;
+  }
+  .trial-div > div > span > svg {
+    top: 20px;
+    right: 10px;
+
+  }
+  .setups-body>img{
+    display: none;
+  }
+}
